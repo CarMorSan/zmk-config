@@ -346,14 +346,14 @@
 
         principal {
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E                  &kp R          &kp T          &kp Y        &kp U                   &kp I         &kp O    &kp P     &kp BACKSPACE
-&kp CAPSLOCK  &kp A  &kp S  &kp D                  &lt 4 F        &kp G          &kp H        &lt 5 J                 &kp K         &kp L    &kp SEMI  &kp ENTER
-&kp LSHFT     &kp Z  &kp X  &kp C                  &kp V          &kp B          &kp N        &kp M                   &kp COMMA     &kp DOT  &kp FSLH  &kp RSHFT
-                            &mt LGUI LEFT_BRACKET  &mt LCTRL TAB  &lt 1 SPACE    &lt 2 ENTER  &mt LEFT_ALT BACKSPACE  &lt 3 DELETE
+&kp TAB       &kp Q             &kp W  &kp E                  &kp R          &kp T          &kp Y        &kp U                   &kp I         &kp O    &kp P                     &kp BACKSPACE
+&kp CAPSLOCK  &kp A             &kp S  &kp D                  &lt 4 F        &kp G          &kp H        &lt 5 J                 &kp K         &kp L    &kp SEMI                  &kp ENTER
+&kp LSHFT     &mt LEFT_SHIFT Z  &kp X  &kp C                  &kp V          &kp B          &kp N        &kp M                   &kp COMMA     &kp DOT  &mt RIGHT_SHIFT LA(FSLH)  &kp RSHFT
+                                       &mt LGUI LEFT_BRACKET  &mt LCTRL TAB  &lt 1 SPACE    &lt 2 ENTER  &mt LEFT_ALT BACKSPACE  &lt 3 DELETE
             >;
         };
 
-        moverme_seleccionar_texto {
+        flechas_seleccion {
             bindings = <
 &trans  &trans        &kp LS(LC(LEFT))  &kp LS(UP_ARROW)  &kp LS(LC(RIGHT))  &trans         &trans    &kp LC(LEFT_ARROW)  &kp UP_ARROW  &kp LC(RIGHT)  &trans   &trans
 &trans  &kp LS(HOME)  &kp LS(LEFT)      &kp LS(DOWN)      &kp LS(RIGHT)      &kp LS(END)    &kp HOME  &kp LEFT            &kp DOWN      &kp RIGHT      &kp END  &trans
@@ -362,12 +362,12 @@
             >;
         };
 
-        fila_numeros_teclado_numerico {
+        numeros {
             bindings = <
-&trans  &trans  &kp N7        &kp N8        &kp N9        &trans    &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
-&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0    &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-                              &trans        &trans        &trans    &trans           &trans           &trans
+&none   &none  &kp N7        &kp N8        &kp N9        &none           &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none
+&none   &none  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0          &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
+&trans  &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none           &none            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &trans
+                             &none         &none         &kp LEFT_ALT    &none            &none            &none
             >;
         };
 
@@ -383,7 +383,7 @@
         signos_programacion_derecha {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &signo_admiracion  &signo_menos  &guion_bajo      &arroba      &tilde            &por_ciento
-&trans  &trans  &trans  &trans  &trans  &trans    &signo_mas         &igual_que    &barra_vertical  &ampersand   &enie             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &signo_mas         &igual_que    &barra_vertical  &ampersand   &enie             &none
 &trans  &trans  &trans  &trans  &trans  &trans    &asterisco         &numeral      &punto_y_coma    &dos_puntos  &barra_inclinada  &barra_invertida
                         &trans  &trans  &trans    &trans             &trans        &trans
             >;
@@ -391,8 +391,8 @@
 
         signos_programacion_izquierda {
             bindings = <
-&cierra_signo_interrogacion  &mayor_que  &cierra_corchetes  &cierra_llaves    &cierra_parentesis  &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&abre_signo_interrogacion    &menor_que  &abre_corchetes    &abre_llaves      &abre_parentesis    &trans                &trans  &trans  &trans  &trans  &trans  &trans
+&cierra_signo_interrogacion  &mayor_que  &cierra_corchetes  &cierra_llaves    &cierra_parentesis  &none                 &trans  &trans  &trans  &trans  &trans  &trans
+&abre_signo_interrogacion    &menor_que  &abre_corchetes    &abre_llaves      &abre_parentesis    &none                 &trans  &trans  &trans  &trans  &trans  &trans
 &abre_signo_exclamacion      &pico       &signo_pesos       &comillas_dobles  &comilla_simple     &comilla_invertida    &trans  &trans  &trans  &trans  &trans  &trans
                                                             &trans            &trans              &trans                &trans  &trans  &trans
             >;
