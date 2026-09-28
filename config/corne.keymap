@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     macros {
@@ -338,85 +339,6 @@
 
             label = "ABRE_SIGNO_EXCLAMACION";
         };
-
-        a_acento: a_acento {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_0>,
-                <&macro_release &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_0>;
-
-            label = "A_ACENTO";
-        };
-
-        e_acento: e_acento {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_0>,
-                <&macro_release &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_0>;
-
-            label = "E_ACENTO";
-        };
-
-        i_acento: i_acento {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_1>,
-                <&macro_release &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_1>;
-
-            label = "I_ACENTO";
-        };
-
-        o_acento: o_acento {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_2>,
-                <&macro_release &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_2>;
-
-            label = "O_ACENTO";
-        };
-
-        u_acento: u_acento {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_3>,
-                <&macro_release &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_6 &kp KP_NUMBER_3>;
-
-            label = "U_ACENTO";
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        a_acento {
-            bindings = <&a_acento>;
-            key-positions = <19 13>;
-        };
-
-        e_acento {
-            bindings = <&e_acento>;
-            key-positions = <19 3>;
-        };
-
-        i_acento {
-            bindings = <&i_acento>;
-            key-positions = <16 8>;
-        };
-
-        o_acento {
-            bindings = <&o_acento>;
-            key-positions = <16 9>;
-        };
-
-        u_acento {
-            bindings = <&u_acento>;
-            key-positions = <16 7>;
-        };
     };
 
     keymap {
@@ -433,10 +355,10 @@
 
         flechas_seleccion {
             bindings = <
-&kp ESC  &trans        &kp LS(LC(LEFT))  &kp LS(UP_ARROW)  &kp LS(LC(RIGHT))  &trans         &trans    &kp LC(LEFT_ARROW)  &kp UP_ARROW  &kp LC(RIGHT)  &trans   &trans
-&trans   &kp LS(HOME)  &kp LS(LEFT)      &kp LS(DOWN)      &kp LS(RIGHT)      &kp LS(END)    &kp HOME  &kp LEFT            &kp DOWN      &kp RIGHT      &kp END  &trans
-&trans   &trans        &trans            &trans            &trans             &trans         &trans    &trans              &trans        &trans         &trans   &trans
-                                         &trans            &trans             &trans         &trans    &trans              &trans
+&trans  &trans        &kp LS(LC(LEFT))  &kp LS(UP_ARROW)  &kp LS(LC(RIGHT))  &trans         &trans    &kp LC(LEFT_ARROW)  &kp UP_ARROW  &kp LC(RIGHT)  &trans   &trans
+&trans  &kp LS(HOME)  &kp LS(LEFT)      &kp LS(DOWN)      &kp LS(RIGHT)      &kp LS(END)    &kp HOME  &kp LEFT            &kp DOWN      &kp RIGHT      &kp END  &trans
+&trans  &trans        &trans            &trans            &trans             &trans         &trans    &trans              &trans        &trans         &trans   &trans
+                                        &trans            &trans             &trans         &trans    &trans              &trans
             >;
         };
 
@@ -451,10 +373,10 @@
 
         teclas_funcion_audio_capturas {
             bindings = <
-&kp F1             &kp F2               &kp F3                       &kp F4         &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&kp C_VOLUME_UP    &kp LG(PRINTSCREEN)  &kp LC(LA(LG(PRINTSCREEN)))  &kp LG(LS(S))  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-&kp C_VOLUME_DOWN  &kp K_MUTE           &trans                       &trans         &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-                                                                     &trans         &trans  &trans    &trans  &trans  &trans
+&kp F1             &kp F2               &kp F3                       &kp F4         &kp F5      &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp C_VOLUME_UP    &kp LG(PRINTSCREEN)  &kp LC(LA(LG(PRINTSCREEN)))  &kp LG(LS(S))  &kp ESCAPE  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&kp C_VOLUME_DOWN  &kp K_MUTE           &trans                       &trans         &trans      &trans    &trans  &trans  &trans  &trans   &trans   &trans
+                                                                     &trans         &trans      &trans    &trans  &trans  &trans
             >;
         };
 
