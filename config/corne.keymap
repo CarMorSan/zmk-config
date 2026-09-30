@@ -339,6 +339,86 @@
             label = "ABRE_SIGNO_EXCLAMACION";
         };
 
+        comentar: comentar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp K &kp C>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "COMENTAR";
+        };
+
+        descomentar: descomentar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp K &kp U>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "DESCOMENTAR";
+        };
+
+        expandir: expandir {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp M &kp L>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "EXPANDIR";
+        };
+
+        contraer: contraer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp M &kp O>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
+            label = "CONTRAER";
+        };
+
+        mayusculas: mayusculas {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_SHIFT &kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp LEFT_SHIFT &kp U>;
+
+            label = "MAYUSCULAS";
+        };
+
+        minusculas: minusculas {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp U>,
+                <&macro_release>,
+                <&kp LCTRL &kp U>;
+
+            label = "MINUSCULAS";
+        };
+
         a_acento: a_acento {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -508,10 +588,10 @@
 
         flechas_seleccion {
             bindings = <
-&kp ESC  &trans        &kp LS(LC(LEFT))  &kp LS(UP_ARROW)  &kp LS(LC(RIGHT))  &trans         &trans    &kp LC(LEFT_ARROW)  &kp UP_ARROW  &kp LC(RIGHT)  &trans   &trans
-&trans   &kp LS(HOME)  &kp LS(LEFT)      &kp LS(DOWN)      &kp LS(RIGHT)      &kp LS(END)    &kp HOME  &kp LEFT            &kp DOWN      &kp RIGHT      &kp END  &trans
-&trans   &trans        &trans            &trans            &trans             &trans         &trans    &trans              &trans        &trans         &trans   &trans
-                                         &trans            &trans             &trans         &trans    &trans              &trans
+&trans       &trans        &kp LS(LC(LEFT))  &kp LS(UP_ARROW)  &kp LS(LC(RIGHT))  &kp LA(LEFT_SHIFT)    &kp LC(Y)      &kp LC(LEFT_ARROW)  &kp UP_ARROW  &kp LC(RIGHT)  &kp LS(F3)  &kp F3
+&mayusculas  &kp LS(HOME)  &kp LS(LEFT)      &kp LS(DOWN)      &kp LS(RIGHT)      &kp LS(END)           &kp HOME       &kp LEFT            &kp DOWN      &kp RIGHT      &kp END     &kp LA(R)
+&minusculas  &kp LC(Z)     &kp LC(X)         &kp LC(C)         &kp LC(V)          &kp LC(W)             &kp LC(LS(L))  &comentar           &descomentar  &contraer      &expandir   &kp LA(A)
+                                             &trans            &trans             &trans                &trans         &trans              &trans
             >;
         };
 
