@@ -479,7 +479,7 @@
         };
 
         I_acento {
-            bindings = <&none>;
+            bindings = <&I_acento>;
             key-positions = <12 8>;
         };
 
