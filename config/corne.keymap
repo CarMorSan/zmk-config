@@ -468,27 +468,27 @@
             key-positions = <16 7>;
         };
 
-        A_acento {
+        A_acento_mayus {
             bindings = <&A_acento_mayus>;
             key-positions = <12 13>;
         };
 
-        E_acento {
+        E_acento_mayus {
             bindings = <&E_acento_mayus>;
             key-positions = <12 3>;
         };
 
-        I_acento {
+        I_acento_mayus {
             bindings = <&I_acento_mayus>;
             key-positions = <12 8>;
         };
 
-        O_acento {
+        O_acento_mayus {
             bindings = <&O_acento_mayus>;
             key-positions = <12 9>;
         };
 
-        U_acento {
+        U_acento_mayus {
             bindings = <&U_acento_mayus>;
             key-positions = <12 7>;
         };
