@@ -389,54 +389,54 @@
             label = "U_ACENTO";
         };
 
-        A_acento: A_acento {
+        A_acento_mayus: A_acento_mayus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_N8 &kp KP_N1>,
                 <&macro_release &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_N8 &kp KP_N1>;
 
-            label = "A_ACENTO";
+            label = "A_ACENTO_MAYUS";
         };
 
-        E_acento: E_acento {
+        E_acento_mayus: E_acento_mayus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_N4 &kp KP_N4>,
                 <&macro_release &kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_N4 &kp KP_N4>;
 
-            label = "E_ACENTO";
+            label = "E_ACENTO_MAYUS";
         };
 
-        I_acento: I_acento {
+        I_acento_mayus: I_acento_mayus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LEFT_ALT &kp KP_N2 &kp KP_N1 &kp KP_N4>,
                 <&macro_release &kp LEFT_ALT &kp KP_N2 &kp KP_N1 &kp KP_N4>;
 
-            label = "I_ACENTO";
+            label = "I_ACENTO_MAYUS";
         };
 
-        O_acento: O_acento {
+        O_acento_mayus: O_acento_mayus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LEFT_ALT &kp KP_N2 &kp KP_N2 &kp KP_N4>,
                 <&macro_release &kp LEFT_ALT &kp KP_N2 &kp KP_N2 &kp KP_N4>;
 
-            label = "O_ACENTO";
+            label = "O_ACENTO_MAYUS";
         };
 
-        U_acento: U_acento {
+        U_acento_mayus: U_acento_mayus {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press &kp LEFT_ALT &kp KP_N2 &kp KP_N3 &kp KP_N3>,
                 <&macro_release &kp LEFT_ALT &kp KP_N2 &kp KP_N3 &kp KP_N3>;
 
-            label = "U_ACENTO";
+            label = "U_ACENTO_MAYUS";
         };
     };
 
@@ -469,27 +469,27 @@
         };
 
         A_acento {
-            bindings = <&A_acento>;
+            bindings = <&A_acento_mayus>;
             key-positions = <12 13>;
         };
 
         E_acento {
-            bindings = <&E_acento>;
+            bindings = <&E_acento_mayus>;
             key-positions = <12 3>;
         };
 
         I_acento {
-            bindings = <&I_acento>;
+            bindings = <&I_acento_mayus>;
             key-positions = <12 8>;
         };
 
         O_acento {
-            bindings = <&O_acento>;
+            bindings = <&O_acento_mayus>;
             key-positions = <12 9>;
         };
 
         U_acento {
-            bindings = <&U_acento>;
+            bindings = <&U_acento_mayus>;
             key-positions = <12 7>;
         };
     };
